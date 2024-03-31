@@ -10,13 +10,7 @@ pipeline {
 
     }
 
-    agent any 
-
-          tools
-    {
-        maven "Maven"
-    }
-
+    
     stages { 
 
         stage('Cloning our Git') { 
@@ -29,12 +23,7 @@ pipeline {
 
         } 
 
-        stage('Execute Maven') {
-            steps {
-
-                sh 'mvn package'
-            }
-        }
+        
 
         stage('Building our image') { 
 
