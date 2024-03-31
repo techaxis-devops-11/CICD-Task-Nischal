@@ -69,7 +69,7 @@ pipeline {
        stage('Run Docker container on remote hosts') {
 
              steps {
-             sh 'docker -H ssh://ubuntu@54.89.209.200 run -d -p 4002:80 --name=tomcat techaxis/tomcat:$BUILD_NUMBER'
+             sh 'docker -H ssh://ubuntu@54.89.209.200 run -d -p 8080:8080 --name=tomcat techaxis/tomcat:$BUILD_NUMBER'
             }
            
         }
